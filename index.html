@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7e6df">
+<title>For Jaanii ♡</title>
+<style>
+:root{--paper:#fff9ef;--rose:#b85e69;--ink:#67464a;--pink:#f3d7d7;--gold:#c39a63}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 15% 10%,#fff9f0 0 8%,transparent 30%),linear-gradient(135deg,#f2d9d4,#f7e9df 50%,#e9d5c8);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:12px;border:1px solid #b98e7d;pointer-events:none;z-index:5;opacity:.55}
+.wrap{width:min(92%,620px);margin:30px auto;padding:18px 0 40px}
+.paper{position:relative;background:var(--paper);padding:30px 23px 34px;border:1px solid #e5cbb7;box-shadow:0 14px 45px #8d5b4c22;transform:rotate(-.3deg)}
+.tape{position:absolute;top:-11px;left:calc(50% - 48px);width:96px;height:25px;background:#e8c8b8aa;transform:rotate(-3deg)}
+.topline{text-align:center;letter-spacing:3px;text-transform:uppercase;font:11px Arial,sans-serif;color:#ad7771}
+h1{text-align:center;font-size:clamp(38px,9vw,58px);font-weight:normal;margin:13px 0 5px;color:#a95362}
+.subtitle{text-align:center;font-style:italic;color:#98716a;margin:0 0 24px}
+.flower{text-align:center;font-size:25px;letter-spacing:7px;margin:10px}
+.polaroid{width:min(76%,290px);margin:22px auto 24px;padding:10px 10px 18px;background:#fff;box-shadow:0 5px 16px #8d5b4c22;transform:rotate(2deg);text-align:center}
+.polaroid .art{height:150px;background:linear-gradient(145deg,#f6d9d4,#f7e9df);display:grid;place-items:center;font-size:62px;position:relative;overflow:hidden}
+.polaroid .art:after{content:"♡";position:absolute;font-size:170px;color:#fff8;transform:rotate(-15deg)}
+.polaroid p{font-style:italic;margin:10px 0 0;font-size:14px}
+button{font:inherit;cursor:pointer;border:0;border-radius:30px;padding:13px 20px;background:#ae5967;color:#fffaf3;box-shadow:0 5px 12px #ae596733;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px);background:#984858}
+.center{text-align:center}
+.letter{display:none;margin:22px 0 10px;padding:20px 17px;border-top:1px dashed #d4b4a6;border-bottom:1px dashed #d4b4a6;text-align:center;animation:appear .8s ease both}
+.letter.show{display:block}
+.message{font-size:clamp(23px,5.6vw,31px);line-height:1.55;color:#a34f60}
+.note{font-size:15px;line-height:1.8;color:#84635f}
+.music{margin:22px auto 0;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.music small{display:block;width:100%;text-align:center;color:#8e7069;font:12px Arial,sans-serif}
+.final{display:none;text-align:center;padding:24px 0 6px;animation:appear 1s ease both}
+.final.show{display:block}
+.final h2{font-size:clamp(34px,8vw,49px);font-weight:normal;color:#b04f63;margin:0 0 12px}
+.footer{text-align:center;font:11px Arial,sans-serif;letter-spacing:2px;color:#a47e72;margin-top:22px}
+.heart{position:fixed;bottom:-40px;z-index:3;pointer-events:none;animation:floatUp linear forwards;opacity:.85}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:520px){.paper{padding:35px 42px 38px}.wrap{margin-top:44px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <main class="paper">
+  <div class="tape"></div>
+  <div class="topline">a little piece of my heart</div>
+  <h1>For Jaanii ♡</h1>
+  <p class="subtitle">a tiny love note, just for you</p>
+  <div class="flower">🌷 ✿ ♡ ✿ 🌷</div>
+  <div class="polaroid">
+   <div class="art" aria-label="decorative hearts">💗</div>
+   <p>my favourite person, always</p>
+  </div>
+  <div class="center">
+   <button id="openBtn" type="button">Open your little letter 💌</button>
+  </div>
+  <section class="letter" id="letter" aria-live="polite">
+   <div class="message">I'm soooo luckyyyyyyy to have youuuuuuuuu in this world, My loveeeeeee 🤗🫂🌷</div>
+   <p class="note">If I could wrap a hug in paper, I'd put a thousand of them in this little scrapbook for you. ♡</p>
+   <div class="music">
+    <button id="musicBtn" type="button">♫ Play our song</button>
+    <small>“It's You” — Ali Gatie · tap to play</small>
+   </div>
+   <div id="player" style="display:none;margin:16px auto 0;max-width:420px">
+    <iframe id="yt" title="It's You by Ali Gatie" width="100%" height="180" src="" style="border:0;border-radius:10px" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+   </div>
+   <div class="center" style="margin-top:24px">
+    <button id="finalBtn" type="button">One last thing… ♡</button>
+   </div>
+   <div class="final" id="final">
+    <div style="font-size:38px;letter-spacing:8px">💗 💞 💗</div>
+    <h2>I LOVE YOU, JAANII!</h2>
+    <p class="note">today, tomorrow, and in all the little moments in between. 🫂🌷</p>
+   </div>
+  </section>
+  <div class="footer">MADE WITH ALL MY LOVE · ONLY FOR YOU</div>
+ </main>
+</div>
+<script>
+const openBtn=document.getElementById('openBtn'), letter=document.getElementById('letter');
+openBtn.addEventListener('click',()=>{letter.classList.add('show');openBtn.textContent='Your letter is open ♡';openBtn.disabled=true;burstHearts(16);});
+document.getElementById('musicBtn').addEventListener('click',()=>{
+ const player=document.getElementById('player'), yt=document.getElementById('yt');
+ player.style.display='block';
+ if(!yt.src) yt.src='https://www.youtube-nocookie.com/embed/7pG5vQpQP5c?autoplay=1&rel=0';
+ document.getElementById('musicBtn').textContent='♫ Our song is ready';
+ burstHearts(8);
+});
+document.getElementById('finalBtn').addEventListener('click',()=>{
+ document.getElementById('final').classList.add('show');
+ document.getElementById('finalBtn').style.display='none';
+ burstHearts(28);
+});
+function burstHearts(n){for(let i=0;i<n;i++){setTimeout(()=>{const h=document.createElement('div');h.className='heart';h.textContent=['♡','♥','💗','🌷'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*24)+'px';h.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),8500)},i*90)}}
+setInterval(()=>{if(document.visibilityState==='visible'&&Math.random()>.45)burstHearts(1)},1800);
+</script>
+</body>
+</html>
